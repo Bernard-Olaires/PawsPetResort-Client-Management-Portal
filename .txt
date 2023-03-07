@@ -1,0 +1,33 @@
+Name: 
+Bernard Olaires Jr
+
+Stack: 
+JavaScript(MERN)
+
+GitHub Repo link: 
+https://github.com/Bernard-Olaires/paws-client-management-portal
+
+Project name:
+Paws-Client-Management-Portal
+
+
+Project description: 
+I work for a doggy daycare called Paws Pet Resort. I asked my owner/managers/supervisors if I would create them an app what would you add / need in said app.
+They explained to me that most daycares have a client portal so clients can add thier own dogs and information to reduce the load for them. There system is pretty outdated and the front 
+usually have to manual add and create each client info. This reduces that load for them so managment can just look up dogs based on information thier owner put. I also added a reservation table where 
+clients can request a reservation(Do note that the owner said that if this website were to deploy that managment will still need to call client to confirm reservation). 
+
+MVP (Minimum Viable Product) features: 
+Client Can register and log in
+Client can create a new dog
+Client can update dog dog information
+Client can create a new reservation
+Client can view Dog and Reservation information
+
+Managment can log in with created Account (Owner doesn't like individual accounts)
+Managment access to all dogs and thier information
+Managment access all resevation and delete reservations
+
+
+Bonus feature(s): 
+Register and Login
