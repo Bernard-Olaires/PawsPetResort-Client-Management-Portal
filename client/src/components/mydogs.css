@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.myDog-content {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .myDog-container div{
+    align-content: space-between;
+    display: grid;
+} */
+
+
+

@@ -1,0 +1,4 @@
+.top-container, .nav-right{
+    display: flex;
+    justify-content: space-around;
+}

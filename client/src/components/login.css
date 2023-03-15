@@ -1,0 +1,42 @@
+.login-form-container, .login-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    border: 1px solid black;
+    padding: 20px;
+    min-width: 18.75rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 20px 50px;
+    background: #e3e3e3;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    flex-direction: column;
+}
+
+.login-form div {
+    padding: 2px;
+    font-size: 16px;
+}
+
+form label, textarea, input{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.login-btn {
+    margin-top: 5px;
+    padding: 7px;
+    border: none;
+    background-color: #42b883	;
+    color: white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.login-btn:hover {
+    box-shadow: black 1px 5px 3px -1px;
+}
