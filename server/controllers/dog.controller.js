@@ -58,7 +58,17 @@ module.exports = {
                 console.log(err)
                 res.status(500).json(err)
             })
-    }
+    },
+    updateDog: (req, res) => {
+        Dog.findByIdAndUpdate({ _id: req.params.id } ,req.body, {new: true, runValidators: true})
+            .then((updatedDog) => {
+                res.json(updatedDog)
+            })
+            .catch((err) => {
+                console.log(err)
+                res.status(500).json(err)
+            })
+    } 
 }
 
 

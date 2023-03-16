@@ -7,10 +7,9 @@ import './login.css'
 const Login = (props) => {
 
     const navigate = useNavigate()
-    const {loggedInUser, setLoggedInUser} = useContext(userContext)
+    const {setLoggedInUser} = useContext(userContext)
     const path = useLocation().pathname;
     const location = path.split("/")[1];
-
 
     const [userLogin, setUserLogin] = useState({
         email:'',

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {UserProvider} from './context/UserContext';
 import Login from './components/Login';
@@ -7,6 +7,10 @@ import Main from './views/Main';
 import MainDogForm from './views/MainDogForm';
 import MainDogs from './views/MainDogs';
 import MainViewDog from './views/MainViewDog';
+import MainEdit from './views/MainEdit';
+import MainProfilePage from './views/MainProfilePage';
+import './index.css'
+import MainEditProfile from './views/MainEditProfile';
 
 
 
@@ -22,6 +26,9 @@ function App() {
             <Route path='/newDogForm' element={<MainDogForm/>}/>
             <Route path='/myDogs' element={<MainDogs />}/>
             <Route path='/getOneDog/:id' element={<MainViewDog />} />
+            <Route path='/editDog/:id' element={<MainEdit />} />
+            <Route path='/oneUser/:id' element={<MainProfilePage />} />
+            <Route path='/updateUser/:id' element={<MainEditProfile />} />
         </Routes>
       </UserProvider>
     </div>

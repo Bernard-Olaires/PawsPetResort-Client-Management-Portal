@@ -41,8 +41,7 @@ const DogForm = (props) => {
         axios.post('http://localhost:8000/api/postDog', dog, {withCredentials:true})
             .then((res) => {
                 console.log(res)
-                // setAllDogs([...allDogs, res.data])
-                nagivate('/dashboard')
+                nagivate('/myDogs')
             })
             .catch((err) => {
                 console.log(err)

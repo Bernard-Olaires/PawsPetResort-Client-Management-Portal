@@ -1,5 +1,5 @@
-import React, {useState, useContext} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, {useContext} from 'react';
+import {useNavigate } from 'react-router-dom';
 import { userContext } from '../context/UserContext';
 import axios from 'axios'
 import './navbar.css'
@@ -8,7 +8,7 @@ import './navbar.css'
 const Nav = (props) => {
     const navigate = useNavigate();
 
-    const {loggedInUser, setLoggedInUser} = useContext(userContext);
+    const {loggedInUser} = useContext(userContext);
 
     const logout = (e) => {
         axios.post('http://localhost:8000/api/logout', {} ,{withCredentials:true})

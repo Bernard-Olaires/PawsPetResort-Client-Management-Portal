@@ -57,5 +57,25 @@ module.exports = {
     logout: (req, res) => {
         res.clearCookie('userToken').json({message:'User is logged out'})
         // res.sendStatus(200).json({message:'User is logged out'});
+    },
+    getOneUser: (req, res) => {
+        const {params} = req;
+        User.findOne({_id: params.id})
+            .then((user) => {
+                res.json(user)
+            })
+            .catch((err) => {
+                res.status(500).json(err)
+            })
+    },
+    updateUser: (req, res) => {
+        User.findByIdAndUpdate({ _id: req.params.id } ,req.body, {new: true, runValidators: true})
+            .then((updatedUser) => {
+                res.json(updatedUser)
+            })
+            .catch((err) => {
+                console.log(err)
+                res.status(500).json(err)
+            })
     }
 }
