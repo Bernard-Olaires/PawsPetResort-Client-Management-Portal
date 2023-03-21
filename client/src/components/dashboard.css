@@ -7,15 +7,70 @@
 .link-container {
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 .link-container div {
     min-width: 200px;
     min-height: 400px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     align-content: space-between;
 }
+
+.dash-head{
+    background-image: url('../images/dog-field.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-position: right 40% bottom 45%;
+    padding: 40px;
+}
+
+.myDogs {
+    background-image: url('../images/dog-running.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.myRes {
+    background-image: url('../images/reservation.jpeg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: right 40% bottom 45%;
+}
+
+.myInfo{
+    background-image: url('../images/my-profile.jpeg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: right 55% bottom 45%;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link-a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.container-head {
+    border: 2px solid black;
+}
+
+.container-headw{
+    border: 2px solid white;
+}
+
+.dashboard-bg{
+    /* background-color: #e0ebeb; */
+    height: 800px;
+}
+

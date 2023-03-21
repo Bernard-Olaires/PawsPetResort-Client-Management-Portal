@@ -3,12 +3,12 @@ const jwt = require('jsonwebtoken');
 
 module.exports = {
 
-    allDogs: (res,req) => {
+    allDogs: (req,res) => {
         Dog.find()
             .then((allDogs) => {
                 res.json(allDogs)
             })
-            .catch((err)=>{
+            .catch((err) => {
                 res.status(500).json(err)
             })
     },
@@ -68,7 +68,7 @@ module.exports = {
                 console.log(err)
                 res.status(500).json(err)
             })
-    } 
+    }
 }
 
 

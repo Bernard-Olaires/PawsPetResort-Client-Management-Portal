@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {useNavigate } from 'react-router-dom';
 import { userContext } from '../context/UserContext';
 import axios from 'axios'
+import pawsLogo from '../images/paws-logo.png'
 import './navbar.css'
 
 
@@ -25,25 +26,30 @@ const Nav = (props) => {
         navigate('/dashboard');
     }
 
+    const myDogs = (e) => {
+        navigate('/myDogs');
+    }
 
-    return(<div>
-            <div  className='top-container'>
-                <header>
-                    <div>
-                        <h1>Paws Owners</h1>
-                    </div>
-                </header>
-                <nav className='navbar'>
-                    <div className='nav-header'>
-                        <h1>Welcome, {loggedInUser.firstName}!</h1>
-                    </div>
-                    <div className='nav-right'>
-                        <button onClick={home}>Home</button>
-                        <button onClick={logout}>logout</button>
-                    </div>
-                </nav>
+    const myRes = (e) => {
+        navigate('/myReservations')
+    }
+
+
+    return(
+        <div className='top-container'>
+            <div className='paws-logo'>
+                <img src={pawsLogo}/>
             </div>
-    </div>)
+            <div className='navbar'>
+                <div className='nav-right'>
+                    <button class="button-89"role="button" onClick={home}>Dashboard</button>
+                    <button class="button-89"role="button" onClick={myDogs}>My Dog(s)</button>
+                    <button class="button-89"role="button" onClick={myRes}>Reservations</button>
+                    <button class="button-89"role="button" onClick={logout}>Logout</button>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Nav;

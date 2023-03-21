@@ -1,19 +1,86 @@
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
+.myDogs-bg{
+    background-image: url('../images/dog-running.jpeg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: right 40% bottom 20%;
+    padding: 40px;
+    color: white;
 }
+
+/* .myDog-content-container{
+    display:flex;
+    justify-content: center ;
+} */
+
+.container{
+    padding: 10px;
+    background-image: url('../images/dogs-playing.jpeg');
+    background-size: cover;
+    height: 700px;
+    /* display: flex;
+    justify-content: space-evenly; */
+}
+
+.newDog-btn{
+    flex-direction: column;
+}
+
 
 .myDog-content {
-    border: 1px solid black;
+    border: 1px solid #d9dad7;
     padding: 10px;
     text-align: center;
+    min-width: 200px;
+    min-height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    margin: 10px;
 }
 
-/* .myDog-container div{
-    align-content: space-between;
-    display: grid;
-} */
+
+.backgr span{
+    background-color: #d9dad7;
+}
+
+.newDog-btn{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-90 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#85db8b 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-90:hover,
+.button-90:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-90:active {
+    background: var(--color);
+    color: #85db8b;
+}
 
 
 

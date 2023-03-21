@@ -13,6 +13,7 @@ app.use(express.json(), express.urlencoded({ extended: true }));
 // DONT FORGET TO ADD ROUTE REQUIRE
 require('./routes/user.routes')(app);
 require('./routes/dog.routes')(app);
+require('./routes/reservations.routes')(app);
 
 
 

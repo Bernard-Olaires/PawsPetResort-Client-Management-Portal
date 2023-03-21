@@ -1,7 +1,19 @@
-.login-form-container, .login-btn-container{
+
+.dog-bg{
+    background-image: url('../images/dogs.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1000px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.login-container,.login-form-container, .login-btn-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .login-form{
@@ -13,8 +25,10 @@
     margin-top: 20px;
     border-radius: 20px 50px;
     background: #e3e3e3;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 5px 40px -10px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     flex-direction: column;
+    margin: 10px;
 }
 
 .login-form div {
@@ -32,7 +46,7 @@ form label, textarea, input{
     margin-top: 5px;
     padding: 7px;
     border: none;
-    background-color: #42b883	;
+    background-color: #85db8b;
     color: white;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }

@@ -1,0 +1,131 @@
+.view-header{
+    background-image: url('../images/dog-field.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-position: right 40% bottom 45%;
+    padding: 40px;
+}
+
+.top-content{
+    background-image: url('../images/look-around.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.top-content, .bottom-view{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.view-res-bg{
+    background-image: url('../images/lab.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+.view-res-content{
+    text-align: center;
+    padding: 20px;
+}
+
+.w {
+    color: white;
+}
+
+.label span {
+    background-color: #f3f3f3;
+}
+
+.w span{
+    background-color: #373B44;
+}
+
+.myProfile-bg{
+    background-image: url('../images/puppy.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+/* .bottom-view{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.button-91 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#f95959 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-91:hover,
+.button-91:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-91:active {
+    background: var(--color);
+    color: #85db8b;
+}
+
+.button-92 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#fcff82 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-92:hover,
+.button-92:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-92:active {
+    background: var(--color);
+    color: #85db8b;
+}

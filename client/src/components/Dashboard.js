@@ -8,26 +8,39 @@ const Dashboard = (props) => {
     const navigate = useNavigate();
     const {loggedInUser} = useContext(userContext);
 
+    console.log(loggedInUser.admin)
+
 
 
     const newDog = (e) => {
         navigate('/newDogForm');
     }
 
+    const newReservation = (e) => {
+        navigate('/newReservation')
+    }
+
     return(
-        <div>
+        <div className='dashboard-bg'>
+            <header className='dash-head'>
+                <h1>Welcome to the Dashboard, {loggedInUser.firstName}!</h1>
+            </header>
             <div className='link-container'>
-                <div className='myInfo'>
-                    <Link to={`/oneUser/${loggedInUser._id}`}>My Profile</Link>
-                </div>
-                <div className='myDogs'>
-                    <Link to={'/myDogs'}>My Dog(s)</Link>
-                    <button onClick={newDog}>Add a New dog</button>
-                </div>
-                <div className='myRes'>
-                    <Link to={'/myReservations'}>My Reservations</Link>
-                    <button>Make a new Reservation</button>
-                </div>
+                <Link to={`/oneUser/${loggedInUser._id}`} className='link-a'>
+                    <div className='myInfo'>
+                        <h1 className='container-head'>Profile</h1>
+                    </div>
+                </Link>
+                <Link to={'/myDogs'} className='link b'>
+                    <div className='myDogs'>
+                        <h1 className='container-headw'>Dog(s)</h1>
+                    </div>
+                </Link>
+                <Link to={'/myReservations'} className='link-a'>
+                    <div className='myRes'>
+                        <h1 className='container-head'>Reservations</h1>
+                    </div>
+                </Link>
             </div>
         </div>
     )

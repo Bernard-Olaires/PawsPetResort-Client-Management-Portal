@@ -74,9 +74,6 @@ const DogSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'User'
     }
-
-
-
 }, {timestamps:true})
 
 const Dog = mongoose.model('Dog', DogSchema);

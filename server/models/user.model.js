@@ -41,9 +41,11 @@ const UserSchema = new mongoose.Schema(
         zip: {
             type: Number,
             required: [true, "Zip Code is required"]
+        },
+        admin: {
+            type: Boolean,
+            default: false
         }
-
-
     },
     { timestamps: true }
 );
@@ -56,7 +58,7 @@ UserSchema.virtual('confirmPassword')
     .get(() => this._confirmPassword)
     .set(value => this._confirmPassword = value);
 
-UserSchema.pre('validate', function (next) {
+UserSchema.pre('validate', function(next) {
     if (this.password !== this.confirmPassword) {
         this.invalidate('confirmPassword', 'Password must match confirm password');
     }
@@ -71,9 +73,6 @@ UserSchema.pre('save', function (next) {
             next();
         });
 });
-
-
-
 
 module.exports = mongoose.model("User", UserSchema)
 

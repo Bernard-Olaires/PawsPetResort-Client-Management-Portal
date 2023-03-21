@@ -39,71 +39,66 @@ const ViewDog = (props) => {
 
 
     return (
-        <div>
-            <header>
+        <div className="view-container">
+            <header className="view-header">
                 <h1>Dog Name: {dog.dogName}</h1>
             </header>
-            <div className="">
-                <div className="">
-                    <div className="">
-                        <p>Dog Name:</p>
-                        <p>{dog.dogName}</p>
-                        <p>Dog Breed:</p>
-                        <p>{dog.dogBreed}</p>
-                        <p>Neutered or Spayed?</p>
-                        <p>{dog.fixed}</p>
-                    </div>
-                    <div className="">
-                        <p>Dog Last Name:</p>
-                        <p>{dog.dogLastName}</p>
-                        <p>Sex:</p>
-                        <p>{dog.dogSex}</p>
-                        <p>at what age:</p>
-                        <p>{dog.whatAge}</p>
-                    </div>
-                </div>
-                <div className="">
-                    <p>Date of Birth:</p>
+            <div className="top-content">
+                <div className="top-left">
+                    <p className='label'>Dog Name:</p>
+                    <p>{dog.dogName}</p>
+                    <p className='label'>Dog Breed:</p>
+                    <p>{dog.dogBreed}</p>
+                    <p className='label'>Neutered or Spayed?</p>
+                    <p>{dog.fixed}</p>
+                    <p className='label'>Date of Birth:</p>
                     <p>{dog.dOb}</p>
 
-                    <p>Color:</p>
+                    <p className='label'>Color:</p>
                     <p>{dog.color}</p>
 
-                    <p>Medications Taken:</p>
+                    <p className='label'>Medications Taken:</p>
                     <p>{dog.medication}</p>
 
-                    <p>Medical Issues / Injuries:</p>
+                    <p className='label'>Medical Issues / Injuries:</p>
                     <p>{dog.medicalIssues}</p>
 
-                    <p>Food:</p>
+                    <p className='label'>Food:</p>
                     <p>{dog.dogFood}</p>
 
-                    <p>Behavior Issues</p>
+                    <p className='label'>Behavior Issues</p>
                     <p>{dog.dogBehavior}</p>
 
-                    <p>Group Care or Individual Care?</p>
+                    <p className='label'>Group Care or Individual Care?</p>
                     <p>{dog.care}</p>
-
-                    <p>Veterinary Information:</p>
-                    <p>Vet's Name:</p>
+                </div>
+                <div className="top-right">
+                    <p className="label">Dog Last Name:</p>
+                    <p>{dog.dogLastName}</p>
+                    <p className='label'>Sex:</p>
+                    <p>{dog.dogSex}</p>
+                    <p className='label'>at what age:</p>
+                    <p>{dog.whatAge}</p>
+                    <p className='label'>Veterinary Information:</p>
+                    <p className='label'>Vet's Name:</p>
                     <p>{dog.vetName}</p>
 
 
-                    <p>Hospital Name:</p>
+                    <p className='label'>Hospital Name:</p>
                     <p>{dog.vetHospital}</p>
 
-                    <p>Location:</p>
+                    <p className='label'>Location:</p>
                     <p>{dog.vetLocation}</p>
 
-                    <p>Phone Number</p>
+                    <p className='label'>Phone Number</p>
                     <p>{dog.vetPhoneNumber}</p>
 
-                    <p>Any Other Notes</p>
+                    <p className='label'>Any Other Notes</p>
                     <p>{dog.otherNotes}</p>
 
-                    <div>
-                        <button onClick={deleteHandler}>Delete</button>
-                        <button onClick={editHandler}>Edit {dog.dogName}</button>
+                    <div id="view-button">
+                        <button class="button-91"role="button" onClick={deleteHandler}>Delete</button>
+                        <button class="button-92"role="button" onClick={editHandler}>Edit {dog.dogName}</button>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import { userContext } from '../context/UserContext';
 import './newDog.css'
 
 const DogForm = (props) => {
 
     const nagivate = useNavigate();
+    const {loggedInUser} = useContext(userContext);
 
     // const {allDogs, setAllDogs} = props;
     const [errors, setErrors] = useState({})
@@ -51,16 +53,16 @@ const DogForm = (props) => {
 
     return (
         <div>
-            <form onSubmit={submitHandler}>
+            <header className='form-header'>
+                <h1>Adding a new dog!</h1>
+                <p className='grats'><span>Congratulations on the new friend, {loggedInUser.firstName}!!!</span></p>
+            </header>
+            <form onSubmit={submitHandler} className='form-bg'>
                 {
                     errors.loggedIn?
                     <p className='errors'>{errors.loggedIn}</p>:
                     null
                 }
-                <header>
-                    <h1>Add a new dog!</h1>
-                    <p>Congratulations on the new friend!</p>
-                </header>
                 <div className='top-form'>
                     <div className='top-left'>
                         <label>Dog Name</label>
@@ -132,7 +134,7 @@ const DogForm = (props) => {
                     }
 
                     <label>Medications Taken</label>
-                    <input type='text' onChange={handleInputChange} value={dog.medication} name='medication'/>
+                    <input type='text' onChange={handleInputChange} value={dog.medication} name='medication' placeholder='If none, please mark "None" '/>
                     {
                             errors.medication?
                             <p className='errors'>{errors.medication.message}</p>:
@@ -140,7 +142,7 @@ const DogForm = (props) => {
                     }
 
                     <label>Medical Issues / Injuries</label>
-                    <input type='text' onChange={handleInputChange} value={dog.medicalIssues} name='medicalIssues'/>
+                    <input type='text' onChange={handleInputChange} value={dog.medicalIssues} name='medicalIssues' placeholder='If none, please mark "None" '/>
                     {
                             errors.medicalIssues?
                             <p className='errors'>{errors.medicalIssues.message}</p>:
@@ -156,7 +158,7 @@ const DogForm = (props) => {
                     }
 
                     <label>Behavior Issues</label>
-                    <input type='text' onChange={handleInputChange} value={dog.dogBehavior} name='dogBehavior'/> 
+                    <input type='text' onChange={handleInputChange} value={dog.dogBehavior} name='dogBehavior' placeholder='If none, please mark "None" '/> 
                     {
                             errors.dogBehavior?
                             <p className='errors'>{errors.dogBehavior.message}</p>:
@@ -212,7 +214,7 @@ const DogForm = (props) => {
                             null
                     }
 
-                    <button>Submit My Dog</button>
+                    <button className='button-90'>Submit My Dog</button>
                 </div>
             </form>
         </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import {useParams,useNavigate} from 'react-router-dom'
-import './registerStyle.css';
 
 
 
@@ -27,37 +26,30 @@ const MyProfile = (props) => {
     }
 
     return( 
-        <div>
-            <h1>User Information</h1>
-            <div>
-                <p>Name:</p>
-                <p>{user.firstName} {user.lastName}</p>
+        <div className='myProfile-bg'>
+            <header className='myDogs-bg'>
+                <h1>User Information</h1>
+            </header>
+            <div className='view-res-content'>
+                <p className='label'><span>Name:</span></p>
+                <p className='w'><span>{user.firstName} {user.lastName}</span></p>
 
-                <p>Email:</p>
-                <p>{user.email}</p>
+                <p className='label'><span>Email:</span></p>
+                <p className='w'><span>{user.email}</span></p>
 
-                <p>Phone Number:</p>
-                <p>{user.phoneNumber}</p>
-            </div>
-            <div>
-                <div>
-                    <p>Address:</p>
-                    <p>{user.address}</p>
-                </div>
-                <div>
-                    <p>City:</p>
-                    <p>{user.city}</p>
-                </div>
-                <div>
-                    <p>State:</p>
-                    <p>{user.state}</p>
-                </div>
-                <div>
-                    <p>Zip:</p>
-                    <p>{user.zip}</p>
-                </div>
-            </div>
-            <div>
+                <p className='label'><span>Phone Number:</span></p>
+                <p className='w'><span>{user.phoneNumber}</span></p>
+                <p className='label'><span>Address:</span></p>
+                <p className='w'><span>{user.address}</span></p>
+
+                <p className='label'><span>City:</span></p>
+                <p className='w'><span>{user.city}</span></p>
+
+                <p className='label'><span>State:</span></p>
+                <p className='w'><span>{user.state}</span></p>
+
+                <p className='label'><span>Zip:</span></p>
+                <p className='w'><span>{user.zip}</span></p>
                 <button onClick={editHandler}>Edit Profile</button>
             </div>
         </div>

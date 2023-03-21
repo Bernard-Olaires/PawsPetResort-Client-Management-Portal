@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './registerStyle.css';
 import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import pawsLogo from '../images/paws-logo.png'
 
 const Register = (props) => {
 
@@ -38,6 +39,9 @@ const Register = (props) => {
 
     return (
         <div className='register-form-container'>
+            <div className='paws-logo'>
+                <img src={pawsLogo}/>
+            </div>
             <form onSubmit={submitHandler} className='register-form'>
                 <header>
                     <h1>New Client</h1>
