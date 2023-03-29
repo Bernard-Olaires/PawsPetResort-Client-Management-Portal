@@ -57,11 +57,7 @@ const ReservationForm = (props) => {
 
                         <label>Dog Name 2</label>
                         <input type='text' onChange={handleInputChange} value={reservation.dogName2} name='dogName2' />
-                        {
-                            errors.dogName2?
-                            <p className='errors'>{errors.dogName2.message}</p>:
-                            null
-                        }
+
 
                         <label>Want a before check-out?</label>
                         <input type='text' onChange={handleInputChange} value={reservation.bath} name='bath' placeholder='"yes" or "no". +$35 bath charge'/>

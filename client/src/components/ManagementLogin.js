@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import {Link, useLocation ,useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import { userContext } from '../context/UserContext';
+import pawsLogo from '../images/paws-logo.png'
 import './login.css'
 
 const ManagementLogin = (props) => {
@@ -40,25 +41,33 @@ const ManagementLogin = (props) => {
     }
 
     return(
-        <div className="login-form-container"> 
-            <form onSubmit={loginHandler} className='login-form'>
-                <header>
-                    <h1>Paws Management</h1>
-                </header>
-                <label className='form-label'>Email:</label>
-                <input className='form-control' type="text" name='email' value={userLogin.email} onChange={onChangeHandler}/>
-
-                <label className='form-label'>Password:</label>
-                <input className='form-control' type="password" name='password' value={userLogin.password} onChange={onChangeHandler}/>
-
-                <div className='login-btn-container'>
-                    <button className='login-btn'>Login</button>
+        <div className='login-container'> 
+            <div className="login-form-container">
+                <div className='paws-logo'>
+                    <img src={pawsLogo}/>
                 </div>
-                <div className='register'>
-                    <p>Don't have an account?</p>
-                    <Link className='text-white' to={'/'}>Register</Link>
-                </div>
-            </form>
+                <form onSubmit={loginHandler} className='login-form'>
+                    <header>
+                        <h1>Management Login</h1>
+                    </header>
+                    <label className='form-label'>Email:</label>
+                    <input className='form-control' type="text" name='email' value={userLogin.email} onChange={onChangeHandler}/>
+
+                    <label className='form-label'>Password:</label>
+                    <input className='form-control' type="password" name='password' value={userLogin.password} onChange={onChangeHandler}/>
+
+                    <div className='login-btn-container'>
+                        <button className='login-btn'>Login</button>
+                    </div>
+                    <div className='register'>
+                        <p>Don't have an account?</p>
+                        <Link className='text-white' to={'/'}>Register</Link>
+                    </div>
+                </form>
+            </div>
+            <div className='dog-bg'>
+
+            </div>
         </div>
     )
 }

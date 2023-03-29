@@ -14,7 +14,7 @@ const ManagementNav = (props) => {
         axios.post('http://localhost:8000/api/logout', {} ,{withCredentials:true})
             .then((res)=>{
                 console.log(res)
-                navigate('/login')
+                navigate('/managementLogin')
             })
             .catch((err) => {
                 console.log(err)

@@ -22,15 +22,15 @@ const Nav = (props) => {
             })
     }
 
-    const home = (e) => {
+    const home = () => {
         navigate('/dashboard');
     }
 
-    const myDogs = (e) => {
+    const myDogs = () => {
         navigate('/myDogs');
     }
 
-    const myRes = (e) => {
+    const myRes = () => {
         navigate('/myReservations')
     }
 

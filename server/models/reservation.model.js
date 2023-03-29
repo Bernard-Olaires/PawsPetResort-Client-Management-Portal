@@ -34,7 +34,6 @@ const ReservationSchema = new mongoose.Schema({
     },
     newInstructions: {
         type: String,
-        required: [true, "Dog Name 1 is required."]
     },
     user_id:{
         type: mongoose.Types.ObjectId,
